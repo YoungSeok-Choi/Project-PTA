@@ -11,3 +11,4 @@ Pluto
 (충북대학교/소프트웨어학과 4학년 email : dydtjr1717@gmail.com)
 
 Dongka
+(충북대학교/소프트웨어학과 4학년 email : takurway@gmail.com)
