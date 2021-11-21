@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>unprocessed</title>
+</head>
+<body>
+<div>
+    <h2>unprocessed</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Image: </label><br>
+        <div>
+            {{form.unprocessed_img}}
+        </div>
+        <br>
+        <label>Content: </label><br>
+        <div>
+            {{form.content}}
+        </div>
+        <button type="submit">submit</button>
+    </form>
+
+    {% if unprocessed_list_ %}
+    {% for unprocessed in unprocessed_list_ %}
+    <div>
+        {% if unprocessed.unprocessed_img %}
+            <img src="{{ unprocessed.unprocessed_img.url }}" width="100px">
+        {% endif %}
+        <p>{{ unprocessed.content | safe }}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+</body>
+</html>
