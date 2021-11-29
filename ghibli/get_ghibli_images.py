@@ -1,4 +1,5 @@
 import urllib.request
+import os
 
 works = ["marnie", #When Marnie Was There
          "kaguyahime", #The story of Princess Kaguya
@@ -9,15 +10,21 @@ works = ["marnie", #When Marnie Was There
          "ged", #Tales from Earthsea
          "chihiro"] #Spirited Away
 
+# path
 url_base = "http://www.ghibli.jp/gallery/"
-local_base = "C:/Users/takur/Desktop/ghibli/"
-ext = ".jpg "
+path = os.getcwd().replace('\\', '/') + '/gImages/'
+
+# make path folder
+os.makedirs(path, exist_ok=True)
+
+# extender
+ext = ".jpg"
 
 for work in works:
     for i in range(50):
         name = work + str(i+1).zfill(3)
         url = url_base + name + ext
-        local = local_base + name + ext
+        local = path + name + ext
         
 #        print(url)
 #        print(local)
