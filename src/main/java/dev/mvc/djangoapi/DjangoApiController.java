@@ -10,6 +10,8 @@ public class DjangoApiController {
     @PostMapping("/some/path")
     public void validApi() {
         System.out.println("api 성공적으로 호출 ");
+        
+        
     }
     
 }
