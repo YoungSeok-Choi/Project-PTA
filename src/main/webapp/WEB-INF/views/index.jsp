@@ -14,7 +14,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <!-- Bootstrap -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
 <style type="text/css">
     
@@ -26,11 +26,19 @@
 
 <body>
     <div style="text-align: center;">
-        <h1>Studio Ghibli. </h1> 
+        <h1>Studio Ghibli</h1> 
         <br><br>
-        <a href="/member" class="btn btn-danger">회원등록</a>
+        <a href="/member" >
+        	<button class="btn btn-primary">회원 등록</button>
+        </a>
         <br><br>
-        <a href="/members" class="btn btn-danger">회원조회</a>
+        <a href="/members" >
+        	<button class="btn btn-info">회원 조회</button>
+        </a>
+        <br><br>
+        <a href="/member/login">
+        	<button class="btn btn-info">로그인</button>
+        </a>
  </div>
 	<br> 
     <div style="text-align: center;">

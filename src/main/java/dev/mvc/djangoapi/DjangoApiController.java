@@ -9,8 +9,8 @@ public class DjangoApiController {
     
     @PostMapping("/some/path")
     public void validApi() {
-        System.out.println("api ¼º°øÀûÀ¸·Î È£Ãâ ");
-        
+        System.out.println("api ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ ");
+        // í•˜í•˜í•˜í•˜í•˜ windows í•œê¸€ ì£¼ì„ í™•ì¸
         
     }
     
