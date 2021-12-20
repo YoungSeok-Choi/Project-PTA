@@ -18,6 +18,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @Configuration
 @PropertySource("classpath:/application.properties")  // 설정 파일 위치
 @MapperScan(basePackages= {"dev.mvc.ptoa", "dev.mvc.member", "dev.mvc.category", "dev.mvc.picture"})
+// 주석추가주석추가
 public class DatabaseConfiguration {
     
     @Autowired
