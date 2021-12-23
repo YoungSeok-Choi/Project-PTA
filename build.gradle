@@ -20,23 +20,28 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-    // thymeleaf ¿Í jspµ¿½Ã¿¡ »ç¿ëÇÒ ¶§ ÇÏ³ª¸¸ ¼±ÅÃÇØ¾ßÇÏ´Â °æ¿ì°¡ ÀÖ´Ù. ±×·¸Áö¾ÊÀ¸¸é ¿¡·¯¹ß»ý .
-    // implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //  ±âº» ÅÛÇÃ¸´ ºä·Î ¼³Á¤µÇ±â¶§¹®¿¡ °æ¿ì¿¡µû¶ó »ç¿ëÇÏ±â.
-    
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
-    compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    annotationProcessor 'org.projectlombok:lombok'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation 'javax.servlet:jstl'
+
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	// if thymeleaf dependency bas been added. there might be conflict with jsp dependency... so choose one jsp or thymeleaf   
+	// implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //  i choose jsp
+	
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'javax.servlet:jstl'
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     
-    // file upload¸¦ À§ÇÑ 2°³ ÀÇÁ¸¼º
-    // https://mvnrepository.com/artifact/commons-io/commons-io       <- Ãß°¡ ºÎºÐ
+    // spring security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+	// implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+    
+    // file uploadï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    // https://mvnrepository.com/artifact/commons-io/commons-io       <- ï¿½ß°ï¿½ ï¿½Îºï¿½
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
    // https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload
    implementation group: 'commons-fileupload', name: 'commons-fileupload', version: '1.3.3'

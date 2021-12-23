@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 /*
- * Àý´ë°æ·Î ./~
- * »ó´ë°æ·Î /~
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ./~
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ /~
  * */
 
-// ¼­ºñ½º, dao ±¸Çö ¹× »ç¿ë¼³Á¤ÇÏ±â.
+// ï¿½ï¿½ï¿½ï¿½, dao ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ë¼³ï¿½ï¿½ï¿½Ï±ï¿½.
 @Controller
 public class MemberCont {
 	
@@ -22,7 +22,7 @@ public class MemberCont {
 	@Qualifier("dev.mvc.member.MemberProc")
 	private MemberProcInter mp;
 	
-	// È¸¿øµî·Ï Æû º¸¿©ÁÖ±â
+	// 
 	@GetMapping(value = "/member")
 	public ModelAndView memberForm() {
 		
@@ -38,7 +38,7 @@ public class MemberCont {
 		int cnt = mp.create(memberVO);
 		ModelAndView mav = new ModelAndView();
 		
-		/* ±âº»crud ¿¬»ê °³¹ß ¿Ï·á ÀÌÈÄ, ¿¡·¯Ã³¸® ºÎºÐ ´Ù·ç±â.(¹Ì¿Ï) */
+		/* ï¿½âº»crud ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½Îºï¿½ ï¿½Ù·ï¿½ï¿½.(ï¿½Ì¿ï¿½) */
 		if (cnt == 0) {
 			mav.addObject("code", "enroll_fail");
 		} else {
@@ -81,7 +81,7 @@ public class MemberCont {
 		ModelAndView mav = new ModelAndView();
 		int cnt = mp.updateInfo(memberVO);
 		
-		/* ±âº»crud ¿¬»ê °³¹ß ¿Ï·á ÀÌÈÄ, ¿¡·¯Ã³¸® ºÎºÐ ´Ù·ç±â.(¹Ì¿Ï) */
+		/* ï¿½âº»crud ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½Îºï¿½ ï¿½Ù·ï¿½ï¿½.(ï¿½Ì¿ï¿½) */
 		if (cnt == 0) {
 			mav.addObject("code", "update_fail");
 		} else {
@@ -112,9 +112,9 @@ public class MemberCont {
 		ModelAndView mav = new ModelAndView();
 		int cnt = mp.deleteMember(member_id);
 		
-	    /* ±âº»crud ¿¬»ê °³¹ß ¿Ï·á ÀÌÈÄ,
+	    /* ï¿½âº»crud ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½,
 		 * 
-		 *  ¿¡·¯Ã³¸® ºÎºÐ ´Ù·ç±â.(¹Ì¿Ï) 
+		 *  ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½Îºï¿½ ï¿½Ù·ï¿½ï¿½.(ï¿½Ì¿ï¿½) 
 		 *  */
 		if (cnt == 0) {
 			mav.addObject("code", "delete_fail");
@@ -124,5 +124,12 @@ public class MemberCont {
 		
 		mav.setViewName("redirect:/members");		
 		return mav;
+	}
+	
+	@GetMapping(value= "/member/login")
+	public ModelAndView memberLogin() {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("/member/memberLogin");
+		return modelAndView;
 	}
 }

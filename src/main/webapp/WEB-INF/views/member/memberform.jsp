@@ -17,51 +17,44 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
-
 <body>
-
-    <div style="text-align: center;">
-            <h1>신규 회원가입</h1>
-    </div>
+	<h1 style="text-align:center">Studio Ghibli 회원가입</h1>
+	<br>
 	
-    <DIV class='content_body'>
-      <FORM name='frm' method='POST' action='/member' class="form-horizontal">
-        <div class="form-group">
-           <label class="control-label col-md-4"> 회원이름 </label>
-           <div class="col-md-8">
-             <input type='text' name='name' value='' required="required" placeholder="이름"
-                        autofocus="autofocus" class="form-control" style='width: 50%;'>
-           </div>
-        </div>
-        <div class="form-group">
-           <label class="control-label col-md-4"> 회원 아이디 </label>
-           <div class="col-md-8">
-             <input type='text' name='id' value='333' required="required" placeholder="아이디"
-                         class="form-control" style='width: 50%;'>
-           </div>
-        </div>  
-        <div class="form-group">
-           <label class="control-label col-md-4"> 비밀번호 </label>
-           <div class="col-md-8">
-             <input type='password' name='passwd' value='444' required="required" placeholder="영문 + 숫자 10자리 이하"
-                    class="form-control" style='width: 50%;'>
-           </div>
-        </div>
-        <div class="form-group">
-           <label class="control-label col-md-4"> 주소 </label>
-           <div class="col-md-8">
-             <input type='text' name='address' value='555' required="required" placeholder="주소"
-                    class="form-control" style='width: 50%;'>
-           </div>
-        </div>  
-      
-        <div class="content_body_bottom" style="padding-right: 50%;">
-          <button type="submit" class="btn">등록</button>
-          <button type="button" onclick="location.href='/members'" class="btn">목록</button>
-        </div>
-      
-      </FORM> 
-    </DIV>
+    <div class="container-fluid">
+    	<div class="row">
+    		<div class="col-sm-4"></div>
+    		<div class="col-sm-4">
+    			<form name='frm' method='POST' action='/member' class="">
+			        <div class="form-group">
+			           <label class="control-label"> 회원이름 </label>
+			           <input type='text' name='name' required="required" placeholder="이름을 입력하세요." autofocus="autofocus" class="form-control">
+			        </div>
+			        <div class="form-group">
+			           <label class="control-label"> 회원 아이디 </label>
+			           <input type='text' name='id' required="required" placeholder="아이디를 입력하세요." class="form-control">
+			        </div>  
+			        <div class="form-group">
+			           <label class="control-label"> 비밀번호 </label>
+			           <!--* 수정사항: 못해도 20자리 까지? -->
+			           <input type='password' name='passwd' required="required" placeholder="영문, 숫자 조합 20자리 이하"
+			                    class="form-control">
+			        </div>
+			        <div class="form-group">
+			           <label class="control-label"> 주소 </label>
+			           <input type='text' name='address' required="required" placeholder="주소를 입력하세요." class="form-control" >
+			        </div>  
+			      
+			        <div style="float:right">
+			          <button type="submit" class="btn btn-info">등록</button>
+			          <button type="button" class="btn" onclick="location.href='/members'">목록으로</button>
+			        </div>
+			      
+			      </form>
+    		</div>
+    		<div class="col-sm-4"></div>
+      	</div>
+    </div>
 
 </body>
 </html>
